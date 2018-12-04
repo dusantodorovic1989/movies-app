@@ -6,7 +6,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     
-        <router-link class="nav-link" to="/cars">Post</router-link>
+        <movie-search></movie-search>
+        <!-- <router-link class="nav-link" to="/cars">Post</router-link> -->
 
         <!-- <router-link class="nav-link" to="/add">Add Cars</router-link>
       
@@ -20,3 +21,13 @@
 </nav>
 </template>
 
+
+
+<script>
+import MovieSearch from './MovieSearch.vue'
+export default {
+    components: {
+        MovieSearch
+    }
+}
+</script>

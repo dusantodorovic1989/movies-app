@@ -2,10 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import AppMovies from './components/AppMovies.vue'
+import MovieSearch from './components/MovieSearch.vue'
 
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
+
+window.EventBus = new Vue();
+
+
 
 const routes = [
   {path: '/', redirect: '/movies'},

@@ -15,15 +15,29 @@
 import Movies from '../services/Movies.js'
 import MovieRow from './MovieRow.vue'
 export default {
-    components: {
+     components: {
         MovieRow
     },
+    created(){
+        window.EventBus.$on('search',(term)=>{
+            this.term = term
+        })
+    },
+   
 
     data(){
         return{
-        movies: []
+        movies: [],
+        term: ''
         }
     },
+    computed:{
+        filteredMovies(){
+            return this.movies.filter((movie)=> movie.title.toLowerCase().includes(term.toLowerCase()))
+        }
+
+    },
+    
 
     beforeRouteEnter(to, from, next) {
        Movies.getAll()
