@@ -8,7 +8,8 @@ Vue.config.productionTip = false
 Vue.use(VueRouter);
 
 const routes = [
-  {path: '/', redirect: '/movies'}
+  {path: '/', redirect: '/movies'},
+  {path: '/movies', component: AppMovies}
 ];
 
 const router = new VueRouter({
