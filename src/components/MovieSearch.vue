@@ -12,9 +12,10 @@
 
 <script>
 export default {
-    computed:{
+    methods:{
         searchHandler(event){
             window.EventBus.$emit('search', event.target.value)
+            
         }
     }
     

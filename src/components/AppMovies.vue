@@ -1,10 +1,18 @@
 <template>
     <div>
         <ul >
-            <li v-for="(movie,index) in movies" :key="index">
+            <li v-for="(movie,index) in filteredMovies" :key="index">
                 <movie-row :movie="movie"></movie-row>
             </li>
         </ul>
+          <template v-if="filteredMovies.length">
+      <ul v-for="movie in filteredMovies" :key="movie.id">
+        <movies-row :movie="movie"/>
+      </ul>
+    </template>
+    <template v-else>
+      <h1 class="failed-search">We dont have the movie with that title in our archive</h1>
+    </template>
 
 
 
@@ -33,7 +41,7 @@ export default {
     },
     computed:{
         filteredMovies(){
-            return this.movies.filter((movie)=> movie.title.toLowerCase().includes(term.toLowerCase()))
+            return this.movies.filter((movie)=> movie.title.toLowerCase().includes(this.term.toLowerCase()))
         }
 
     },

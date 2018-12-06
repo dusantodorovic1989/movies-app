@@ -4,9 +4,10 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <movie-search/>
   <div class="collapse navbar-collapse" id="navbarNav">
     
-        <movie-search></movie-search>
+        
         <!-- <router-link class="nav-link" to="/cars">Post</router-link> -->
 
         <!-- <router-link class="nav-link" to="/add">Add Cars</router-link>
