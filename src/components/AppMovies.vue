@@ -1,13 +1,13 @@
 <template>
     <div>
-        <ul >
+        <!-- <ul >
             <li v-for="(movie,index) in filteredMovies" :key="index">
                 <movie-row :movie="movie"></movie-row>
             </li>
-        </ul>
-          <template v-if="filteredMovies.length">
+        </ul> -->
+    <template v-if="filteredMovies.length">
       <ul v-for="movie in filteredMovies" :key="movie.id">
-        <movies-row :movie="movie"/>
+        <movie-row :movie="movie"/>
       </ul>
     </template>
     <template v-else>
